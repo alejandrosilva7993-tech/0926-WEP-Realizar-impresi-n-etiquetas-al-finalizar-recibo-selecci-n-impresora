@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#334B5D">
+  <title>WEP RF · Flujo sin impresora · Seleccionar impresora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="device is-interactive" data-scenario="pickPrinter" aria-label="Flujo interactivo para seleccionar impresora">
+    <div class="bar-red"></div>
+    <div class="topbar">
+      <button class="topbar-btn" type="button" aria-label="Menú de navegación">
+        <img src="icon-menu.svg" alt="">
+      </button>
+      <button class="topbar-btn" type="button" aria-label="Opciones">
+        <img src="icon-ellipsis.svg" alt="">
+      </button>
+    </div>
+    <img class="wep-logo" src="icon-wep-logo.svg" alt="WEP">
+
+    <main class="content">
+      <h1 class="screen-title">Recibo</h1>
+      <div class="divider"></div>
+      <div class="step-list" id="stepList"></div>
+      <div id="messageZone"></div>
+      <div id="promptZone"></div>
+    </main>
+
+    <div class="toast" id="toast" role="status" hidden>
+      <img class="toast-icon" src="icon-info.svg" alt="">
+      <div>
+        <span id="toastText">etiquetas en impresión</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
